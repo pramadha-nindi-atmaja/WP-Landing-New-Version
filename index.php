@@ -48,6 +48,17 @@ define('WPL_DIR', plugin_dir_path(__FILE__));
 // Uri
 define('WPL_URL', plugin_dir_url(__FILE__));
 
+// Composer dependencies are required: show a notice instead of a fatal error.
+if (! file_exists(WPL_DIR . 'vendor/autoload.php')) {
+    add_action('admin_notices', function () {
+        echo '<div class="notice notice-error"><p><strong>WpLanding:</strong> '
+             . esc_html__('Dependencies are missing. Run "composer install" in the plugin folder.', 'wpl')
+             . '</p></div>';
+    });
+
+    return;
+}
+
 // Base Requirements.
 require_once untrailingslashit(WPL_DIR . '/src/Plugin.php');
 require_once untrailingslashit(WPL_DIR . '/requires.php');

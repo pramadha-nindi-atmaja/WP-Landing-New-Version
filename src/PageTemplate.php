@@ -225,8 +225,6 @@ class PageTemplate
         // Just to be safe, we check if the file exist first
         if (file_exists($file)) {
             return $file;
-        } else {
-            echo $file;
         }
 
         // Return template
