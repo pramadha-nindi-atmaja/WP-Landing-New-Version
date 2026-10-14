@@ -1,0 +1,21 @@
+{
+  "name": "wplanding",
+  "description": "A WordPress Plugin for Landing page",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git"
+  },
+  "author": "Alfio Piccione <dev.alfiopiccione@gmail.com >",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "grunt": "^1.5.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-exec": "^3.0.0",
+    "minimatch": "^5.1.0"
+  },
+  "dependencies": {
+    "lodash": ">=4.17.21"
+  }
+}
